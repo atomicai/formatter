@@ -7,3 +7,4 @@ repos:
     name: iSort Black and autoFlake your python code
     entry: make format
     language: system
+    stages: [commit, push]
