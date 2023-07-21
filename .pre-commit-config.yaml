@@ -5,13 +5,13 @@ fail_fast: true
 repos:
   - repo: local
     hooks:
-      - id: formatdiff
-        name: iSort Black and autoFlake your code [diff].
-        entry: make formatdiff
-        language: system
-        stages: [commit]
       - id: format
         name: iSort Black and autoFlake your code [format].
         entry: make format
+        language: system
+        stages: [commit]
+      - id: formatdiff
+        name: iSort Black and autoFlake your code [diff].
+        entry: make formatdiff
         language: system
         stages: [push]

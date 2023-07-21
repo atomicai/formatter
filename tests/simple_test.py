@@ -1,22 +1,6 @@
 import unittest
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ISimpleTest(unittest.TestCase):
     def setUp(self):
         self.msg = "hello world, simple test"
