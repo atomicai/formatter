@@ -5,7 +5,7 @@ FLAKE_FLAGS=--in-place --remove-all-unused-imports --remove-unused-variable --re
 FLAGE_FLAGS_DIFF=--remove-all-unused-imports --remove-unused-variable --recursive
 # "" is for multi-lang strings (comments, logs), '' is for everything else.
 # BLACK_FLAGS=--skip-string-normalization --line-length=${LINE_WIDTH}
-PYTEST_FLAGS=-p no:warnings
+PYTEST_FLAGS=-p no:warnings --color=yes
 
 install:
 	pip install -e '.[all]'
@@ -31,9 +31,6 @@ format:
 	autoflake -r ${FLAKE_FLAGS} ${NAME} tests
 
 test:
-	pytest tests ${PYTEST_FLAGS} --testmon --suppress-no-test-exit-code
-
-test-all:
 	pytest tests ${PYTEST_FLAGS}
 
 clean:
