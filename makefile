@@ -17,7 +17,6 @@ init:
 	pip install autoflake==2.2.0
 	pre-commit clean
 	pre-commit install
-	git config core.hooksPath .githooks
   	# To check whole pipeline.
 	# pre-commit run --all-files
 

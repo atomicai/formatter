@@ -4,7 +4,9 @@ fail_fast: true
 
 repos:
   - repo: local
-    name: iSort Black and autoFlake your python code
-    entry: make format
-    language: system
-    stages: [commit, push]
+    hooks:
+      - name: iSort Black and autoFlake your python code
+        id: formatting
+        entry: make format
+        language: system
+        stages: [commit, push]

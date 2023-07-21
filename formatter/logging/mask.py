@@ -1,7 +1,7 @@
 import abc
 
-class ILogger(abc.ABC):
 
+class ILogger(abc.ABC):
     @abc.abstractmethod
     def init_experiment(self):
         pass
